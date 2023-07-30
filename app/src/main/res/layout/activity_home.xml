@@ -10,20 +10,22 @@
     <!-- Auto layout, variables, and unit scale are not yet supported -->
     <LinearLayout
         android:id="@+id/navBar"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/mainBlue"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        tools:ignore="MissingConstraints">
+        android:background="@color/mainBlue"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/navBar1"
-            android:orientation="horizontal"
-            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
             tools:ignore="UselessParent">
 
             <TextView
@@ -31,19 +33,52 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Daftar Wisata"
+                android:textColor="@color/white"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end|center_vertical">   <!-- Set gravity to "end" to align the ImageButton to the right -->
+
+                <!-- Add other views here if needed -->
+
+                <ImageButton
+                    android:layout_marginRight="15dp"
+                    android:layout_width="28dp"
+                    android:layout_height="25dp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/gps50"/>
+
+                <ImageButton
+                    android:layout_marginRight="15dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/love"/>
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/user"
+
+            </LinearLayout>
+
 
         </LinearLayout>
+
         <SearchView
             android:id="@+id/searchView"
-            android:background="@drawable/oval"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginBottom="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:queryHint="Cari Tempat Wisata"
-            android:iconifiedByDefault="false" />
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/oval"
+            android:iconifiedByDefault="false"
+            android:queryHint="Cari Tempat Wisata" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

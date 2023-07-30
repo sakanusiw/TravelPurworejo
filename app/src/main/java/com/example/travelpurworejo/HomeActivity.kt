@@ -7,6 +7,14 @@ import android.view.MenuItem
 import android.widget.SearchView
 
 class HomeActivity : AppCompatActivity() {
+
+    private val dataList: List<LokasiWisata> = mutableListOf(
+        LokasiWisata("Item 1"),
+        LokasiWisata("Item 2"),
+        LokasiWisata("Another Item"),
+        // Add more items to your dataList
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -38,7 +46,16 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun performSearch(query: String?) {
-        // Implement your search logic here
-        // For example, you can filter a list of items based on the query
+        val filteredList = dataList.filter { dataItem ->
+            // Perform case-insensitive search based on the 'name' property
+            dataItem.name.contains(query ?: "", ignoreCase = true)
+        }
+
+        // Now, 'filteredList' contains the filtered data based on the search query
+        // You can use this filtered data to update your UI or display search results.
+        // For example, update a RecyclerView or ListView with the filtered data.
     }
 }
+
+// Replace YourDataItem with your actual data item class.
+data class LokasiWisata(val name: String)
