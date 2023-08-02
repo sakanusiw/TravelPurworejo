@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.SearchView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.travelpurworejo.RecyclerView.MyAdapter
 
 class HomeActivity : AppCompatActivity() {
 
@@ -18,6 +21,18 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false) // Use other layout managers for grid, staggered grid, etc.
+
+        val imageResources = mutableListOf<Int>() // Replace with a list of drawable resources
+        // Add resource IDs to imageResources here
+        imageResources.add(R.drawable.curug_lumbung)
+        imageResources.add(R.drawable.curug_lumbung)
+        imageResources.add(R.drawable.curug_lumbung)
+
+        val adapter = MyAdapter(imageResources)
+        recyclerView.adapter = adapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
