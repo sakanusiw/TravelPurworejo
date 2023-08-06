@@ -65,9 +65,10 @@
                 <ImageButton
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/user"
                     android:background="?selectableItemBackgroundBorderless"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user"
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </LinearLayout>
         </LinearLayout>
@@ -94,6 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
+        android:id="@+id/textViewKategori"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
@@ -104,6 +106,42 @@
         android:text="Kategori"
         android:textSize="18sp"
         android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutKategori"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewKategori"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:src="@drawable/categ_pantai"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/categ_airterjun"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/categ_hutan"
+            android:background="?selectableItemBackgroundBorderless"
+            android:scaleType="fitXY"/>
+
+
+    </LinearLayout>
 
 
 
