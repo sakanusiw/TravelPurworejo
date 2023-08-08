@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="5dp">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="160dp"
+        android:layout_height="200dp"
+        android:src="@drawable/nearby_alunalun"
+        android:background="?selectableItemBackgroundBorderless"
+        android:scaleType="fitXY"/>
+
+</LinearLayout>

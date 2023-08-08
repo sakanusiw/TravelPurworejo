@@ -7,11 +7,11 @@ import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelpurworejo.R
 
-class MyAdapter(private val dataList: List<Int>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class NearbyAdapter(private val dataList: List<Int>) : RecyclerView.Adapter<NearbyAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item1_layout, parent, false)
+            .inflate(R.layout.item_nearby_layout, parent, false)
         return ViewHolder(view)
     }
 
@@ -25,6 +25,6 @@ class MyAdapter(private val dataList: List<Int>) : RecyclerView.Adapter<MyAdapte
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageButton: ImageButton = itemView.findViewById(R.id.imageButton1)
+        val imageButton: ImageButton = itemView.findViewById(R.id.imageButton2)
     }
 }

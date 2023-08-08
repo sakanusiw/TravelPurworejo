@@ -7,7 +7,8 @@ import android.view.MenuItem
 import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.travelpurworejo.RecyclerView.MyAdapter
+import com.example.travelpurworejo.RecyclerView.CardAdapter
+import com.example.travelpurworejo.RecyclerView.NearbyAdapter
 
 class HomeActivity : AppCompatActivity() {
 
@@ -31,8 +32,20 @@ class HomeActivity : AppCompatActivity() {
         imageResources.add(R.drawable.curug_lumbung)
         imageResources.add(R.drawable.curug_lumbung)
 
-        val adapter = MyAdapter(imageResources)
+        val adapter = CardAdapter(imageResources)
         recyclerView.adapter = adapter
+
+        val recyclerView1: RecyclerView = findViewById(R.id.recyclerView1)
+        recyclerView1.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false) // Use other layout managers for grid, staggered grid, etc.
+
+        val imageResources1 = mutableListOf<Int>() // Replace with a list of drawable resources
+        // Add resource IDs to imageResources here
+        imageResources1.add(R.drawable.nearby_alunalun)
+        imageResources1.add(R.drawable.nearby_alunalun)
+        imageResources1.add(R.drawable.nearby_alunalun)
+
+        val adapter1 = NearbyAdapter(imageResources1)
+        recyclerView1.adapter = adapter1
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
