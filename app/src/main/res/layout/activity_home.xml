@@ -215,7 +215,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayoutKategori1" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutKategori1"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView1"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView1"
