@@ -41,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
         val imageResources1 = mutableListOf<Int>() // Replace with a list of drawable resources
         // Add resource IDs to imageResources here
         imageResources1.add(R.drawable.nearby_alunalun)
-        imageResources1.add(R.drawable.nearby_alunalun)
+        imageResources1.add(R.drawable.nearby_museumtosanaji)
         imageResources1.add(R.drawable.nearby_alunalun)
 
         val adapter1 = NearbyAdapter(imageResources1)

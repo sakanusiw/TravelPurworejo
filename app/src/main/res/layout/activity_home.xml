@@ -162,10 +162,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutKategori">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutKategori"
+        app:layout_constraintBottom_toTopOf="@id/textViewTerdekat">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -209,7 +211,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="10dp"
         android:text="Terdekat"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -222,6 +223,7 @@
         android:id="@+id/recyclerView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/textViewTerdekat"
         app:layout_constraintEnd_toEndOf="parent"
